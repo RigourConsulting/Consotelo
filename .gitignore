@@ -1,0 +1,8 @@
+# Private local reports, brief files, test screenshots, and QA artifacts
+reports/
+*.log
+*.tmp
+.vscode/
+.idea/
+Thumbs.db
+desktop.ini

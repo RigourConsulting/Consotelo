@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Security information | Consotelo</title>
+  <meta name="description" content="Security architecture, multi-tenant isolation, cryptographic protections, and responsible vulnerability disclosure policy for the Consotelo consulting platform.">
+  <link rel="canonical" href="https://rigourconsulting.github.io/Consotelo/security/">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="stylesheet" href="../assets/css/site.css">
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../" class="brand-link" aria-label="Consotelo home">
+        <img src="../assets/img/consotelo_ribbon.svg" alt="" class="brand-logo" width="36" height="36">
+        <span class="brand-title">Consotelo</span>
+        <span class="brand-tagline">One place for every consultation</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="../" class="nav-link">Home</a>
+        <a href="../privacy/" class="nav-link">Privacy policy</a>
+        <a href="../account-deletion/" class="nav-link">Account deletion</a>
+        <a href="../support/" class="nav-link">Support</a>
+        <a href="../terms/" class="nav-link">Terms</a>
+        <a href="./" class="nav-link active" aria-current="page">Security</a>
+        <a href="../accessibility/" class="nav-link">Accessibility</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="main-content">
+    <article class="policy-content" aria-labelledby="security-title">
+      <h1 id="security-title" class="page-heading">Security information</h1>
+
+      <div class="policy-meta">
+        <span><strong>Publisher</strong> Rigour Consulting Pty Ltd</span>
+        <span><strong>Location</strong> Perth, Western Australia</span>
+        <span><strong>Effective date</strong> 22/11/2026</span>
+        <span><strong>Security contact</strong> rigour.consulting@gmail.com</span>
+      </div>
+
+      <div class="highlight-box">
+        <p>Consotelo is engineered with a focus on data privacy, multi-tenant separation, and verifiable document integrity. This page describes our security controls and our responsible disclosure programme.</p>
+      </div>
+
+      <h2>Our approach to platform security</h2>
+      <p>Consulting relationships involve sensitive commercial discussions, intellectual property, and financial records. Rather than relying on generic marketing claims, Consotelo enforces security through concrete technical boundaries embedded directly within our software architecture.</p>
+
+      <h2>Core security controls</h2>
+
+      <div class="grid-two" style="margin-top: 20px; margin-bottom: 24px;">
+        <div class="card">
+          <h3 class="card-title">Multi-tenant boundary enforcement</h3>
+          <p class="card-body">Every advisory practice operates within an isolated tenant boundary. Isolation is enforced server-side at the database query level, ensuring that consultants and clients cannot access or modify records belonging to other organisations.</p>
+        </div>
+
+        <div class="card">
+          <h3 class="card-title">Cryptographic token hashing</h3>
+          <p class="card-body">Session authentication tokens are cryptographically generated using secure random bytes and persisted exclusively as SHA-256 hashes. Plaintext tokens exist only in memory on the client device during active sessions.</p>
+        </div>
+
+        <div class="card">
+          <h3 class="card-title">Encrypted multi-factor authentication</h3>
+          <p class="card-body">Privileged consultant accounts require multi-factor authentication using time-based one-time passwords. TOTP secret keys are encrypted at rest using AES-128-CBC encryption with dedicated master keys.</p>
+        </div>
+
+        <div class="card">
+          <h3 class="card-title">Tamper-evident document hashing</h3>
+          <p class="card-body">Every consultation agreement and tax invoice PDF is bound to a cryptographic SHA-256 byte digest. Prior to electronic acknowledgement, the client verifies that the downloaded document matches the approved revision.</p>
+        </div>
+
+        <div class="card">
+          <h3 class="card-title">Encrypted network transmission</h3>
+          <p class="card-body">All communications between client devices and our backend services use Transport Layer Security with modern cipher suites. Cleartext HTTP connections are rejected by the application.</p>
+        </div>
+
+        <div class="card">
+          <h3 class="card-title">Brute-force defence and rate limiting</h3>
+          <p class="card-body">Authentication endpoints employ exponential rate limiting and automatic temporary account locking to defend against automated credential stuffing and dictionary attacks.</p>
+        </div>
+      </div>
+
+      <h2>Security of this public website</h2>
+      <p>This public website is hosted as static HTML files on GitHub Pages. It contains no database connections, executes no server-side scripts, collects no personal data, and processes no financial transactions. Hosting static information separately from operational application services eliminates common web application vulnerabilities from this informational site.</p>
+
+      <h2>Responsible vulnerability disclosure</h2>
+      <p>We welcome constructive feedback and responsible vulnerability reports from independent security researchers and software engineers. If you discover a potential security vulnerability in Consotelo, we request that you disclose it to us responsibly:</p>
+      <ul>
+        <li>Email your findings to our security team at <a href="mailto:rigour.consulting@gmail.com">rigour.consulting@gmail.com</a>.</li>
+        <li>Specify "Security Vulnerability Report" in your subject line.</li>
+        <li>Provide detailed technical steps to reproduce the issue, including request payloads and system responses.</li>
+        <li>Do not attempt to access, alter, or destroy customer records or personal data belonging to other users.</li>
+        <li>Do not perform denial-of-service attacks or degrade the availability of our production systems.</li>
+        <li>Allow us a reasonable opportunity to assess and remediate the issue before disclosing details publicly.</li>
+      </ul>
+
+      <h2>Our response commitment</h2>
+      <p>We acknowledge security reports within two Australian business days. Our engineering team prioritises security vulnerabilities based on severity, investigates root causes, and deploys verified corrections through our gated testing pipeline.</p>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div>
+        <h3 class="footer-heading">Consotelo</h3>
+        <p>One place for every consultation. Developed by Rigour Consulting Pty Ltd in Perth, Western Australia.</p>
+        <address class="contact-block">
+          Support inquiries: <a href="mailto:rigour.consulting@gmail.com">rigour.consulting@gmail.com</a>
+        </address>
+      </div>
+
+      <div>
+        <h3 class="footer-heading">Policies and compliance</h3>
+        <ul class="footer-links">
+          <li><a href="../privacy/">Privacy policy</a></li>
+          <li><a href="../account-deletion/">Request account deletion</a></li>
+          <li><a href="../terms/">Terms of service</a></li>
+          <li><a href="./">Security information</a></li>
+          <li><a href="../accessibility/">Accessibility statement</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="footer-heading">Support and assistance</h3>
+        <ul class="footer-links">
+          <li><a href="../support/">Help centre</a></li>
+          <li><a href="mailto:rigour.consulting@gmail.com">Email support</a></li>
+          <li><a href="https://github.com/RigourConsulting/Consotelo">GitHub project</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Rigour Consulting Pty Ltd. All rights reserved. Perth, Western Australia.</p>
+      <p>Effective date: 22/11/2026</p>
+    </div>
+  </footer>
+</body>
+</html>
