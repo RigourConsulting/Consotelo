@@ -1,23 +1,35 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" aria-hidden="true" focusable="false">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" aria-label="Consotelo icon" role="img">
   <defs>
-    <linearGradient id="ribbonPersimmon" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#E05B35" />
+    <linearGradient id="persimmonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF6B3D" />
+      <stop offset="50%" stop-color="#EF5A1D" />
       <stop offset="100%" stop-color="#C04A27" />
     </linearGradient>
-    <linearGradient id="ribbonLilac" x1="0%" y1="100%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#A593AA" />
+    <linearGradient id="lilacGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#D9A8D8" />
+      <stop offset="50%" stop-color="#C292C1" />
       <stop offset="100%" stop-color="#8E7C93" />
     </linearGradient>
-    <linearGradient id="ribbonGraphite" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#3A423D" />
-      <stop offset="100%" stop-color="#1F2421" />
+    <linearGradient id="glassGloss" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.0" />
     </linearGradient>
+    <filter id="subtleShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="1.5" stdDeviation="1.5" flood-color="#1F2421" flood-opacity="0.15" />
+    </filter>
   </defs>
-  <rect width="64" height="64" rx="14" fill="#F7F5F0" />
-  <!-- Smooth intertwined glass ribbon loops -->
-  <path d="M14 42 C14 26 24 16 36 16 C48 16 52 26 50 36 C48 46 36 50 26 48"
-        fill="none" stroke="url(#ribbonLilac)" stroke-width="7" stroke-linecap="round" opacity="0.85" />
-  <path d="M50 22 C50 38 40 48 28 48 C16 48 12 38 14 28 C16 18 28 14 38 16"
-        fill="none" stroke="url(#ribbonPersimmon)" stroke-width="7" stroke-linecap="round" />
-  <circle cx="32" cy="32" r="3.5" fill="url(#ribbonGraphite)" />
+  <!-- Background pill surface -->
+  <rect width="64" height="64" rx="16" fill="#F7F5F0" />
+  <!-- Lilac partnership ribbon loop -->
+  <path d="M 44,20 C 50,26 50,38 42,46 C 34,54 20,52 16,42 C 12,32 18,20 28,16 C 36,13 44,16 46,20" 
+        fill="none" stroke="url(#lilacGrad)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"
+        filter="url(#subtleShadow)" />
+  <!-- Persimmon consultation ribbon loop forming interlocking C -->
+  <path d="M 46,22 C 38,14 24,14 16,24 C 8,34 12,48 24,52 C 34,55 46,48 48,38 C 50,30 46,24 42,22" 
+        fill="none" stroke="url(#persimmonGrad)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"
+        filter="url(#subtleShadow)" />
+  <!-- Inner consultation focal touchpoint -->
+  <circle cx="32" cy="32" r="3.2" fill="#1F2421" opacity="0.85" />
+  <!-- Glass sheen highlight -->
+  <path d="M 20,20 C 26,16 38,16 44,22" fill="none" stroke="url(#glassGloss)" stroke-width="2.5" stroke-linecap="round" />
 </svg>
