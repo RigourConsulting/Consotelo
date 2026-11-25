@@ -1,6 +1,6 @@
 # Consotelo Public Information Website
 
-Official public website, policy repository, and support pages for **Consotelo** (*One place for every consultation*), operated by Rigour Consulting Pty Ltd in Perth, Western Australia.
+Official public website, policy repository, and support pages for **Consotelo** (*One place for every consultation*), operated by Rigour Consulting in Perth, Western Australia.
 
 ## Published Pages and Live Routes
 
@@ -19,4 +19,4 @@ Official public website, policy repository, and support pages for **Consotelo** 
 - **Effective Date**: 22/11/2026
 
 ---
-&copy; 2026 Rigour Consulting Pty Ltd. All rights reserved.
+&copy; 2026 Rigour Consulting. All rights reserved.
