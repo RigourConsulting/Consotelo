@@ -79,11 +79,13 @@
       <h2>Personal information collected by the application</h2>
       <p>We collect only the information necessary to provide consultation coordination, billing, and document administration. Depending on your account role, this includes:</p>
       <ul>
-        <li><strong>Account identification</strong> Full name, professional title, business name, email address, password hashes, and multi-factor authentication enrolment records.</li>
-        <li><strong>Scheduling and appointment records</strong> Proposed appointment times, confirmed consultation slots, participant names, business time zones, and shared consultation notes.</li>
-        <li><strong>Session duration records</strong> Start instants, end instants, active elapsed minutes, pause segments, and consultant internal notes.</li>
-        <li><strong>Financial and invoicing records</strong> Australian Business Numbers (where provided), service fees and hourly rates, billable duration, GST classifications where applicable, sequential invoice numbers, settlement dates, payment methods, transaction reference codes, payment receipts, and strictly consultant-private tax planning reserves and manual PAYG instalment records (never disclosed to clients).</li>
-        <li><strong>Consultation agreements</strong> Agreement titles, terms, agreed fee snapshots, PDF cryptographic digests, electronic acknowledgement records including typed name marks, timestamps, and network IP addresses.</li>
+        <li><strong>Account identification and governance</strong> Full name, professional title, business name, primary authentication email address, salted password hashes, active session token hashes, role assignments, and administrative lifecycle/audit logs.</li>
+        <li><strong>Multiple contact details</strong> Optional additional telephone numbers (Australian and international) and purpose-routed email addresses (general, booking, billing, accounts) stored separately from authentication and account recovery credentials.</li>
+        <li><strong>Practice branding assets</strong> Optional business logos, authorised signatory images, and uploaded letterheads (sanitised with metadata stripped and PDF letterheads safely rasterised into static images) scoped strictly to the uploading practice.</li>
+        <li><strong>Scheduling, calendar imports and exports</strong> Proposed and confirmed consultation slots, recurring schedules, participant names, business time zones, shared notes, RFC 5545 .ics calendar exports (excluding private notes and fees), and consultant-private imported external busy periods.</li>
+        <li><strong>Session duration records</strong> Start instants, end instants, active elapsed minutes, pause segments, offline-resilient local sync queues, and consultant internal notes.</li>
+        <li><strong>Financial, quotation, expense and invoicing records</strong> Australian Business Numbers (where provided), service catalogue definitions, client quotations and acceptance snapshots, business expenses and optional receipt attachments (PDF/JPEG/PNG), GST classifications where applicable, sequential invoice numbers, payment receipts, and strictly consultant-private income-tax planning reserves and manual PAYG instalment records (never disclosed to clients).</li>
+        <li><strong>Consultation agreements and optional client feedback</strong> Agreement titles, terms, agreed fee snapshots, PDF cryptographic digests, electronic acknowledgement records, and optional post-consultation satisfaction ratings and written comments shared privately with the practice only.</li>
       </ul>
 
       <h2>Purposes of data processing</h2>
@@ -120,11 +122,11 @@
       <h2>Data security measures</h2>
       <p>We implement multiple technical and procedural controls to protect personal information against unauthorised access, alteration, disclosure, or loss:</p>
       <ul>
-        <li>Authentication tokens are stored as irreversible cryptographic SHA-256 hashes.</li>
-        <li>Multi-factor authentication secret keys are encrypted at rest using AES-128-CBC encryption.</li>
+        <li>Authentication tokens are stored as irreversible cryptographic SHA-256 hashes with session expiry and revocation support.</li>
+        <li>Passwords are stored using strong salted cryptographic hashing, protected by login rate limiting, recent password confirmation for privileged actions, and secure recovery separated from ordinary contact emails.</li>
         <li>Multi-tenant architecture enforces complete data isolation between consulting practices at the database query level.</li>
-        <li>All network transmissions use Transport Layer Security with modern cipher suites.</li>
-        <li>Agreement documents are verified against SHA-256 byte digests to prevent tampering.</li>
+        <li>All remote network transmissions use HTTPS / Transport Layer Security, and privileged platform administration is restricted to trusted local environments during internal testing.</li>
+        <li>Issued financial documents and agreements capture immutable snapshots and SHA-256 byte digests so historical records are never silently altered.</li>
       </ul>
 
       <h2>Your rights of access and correction</h2>
