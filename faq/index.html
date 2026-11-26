@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frequently asked questions | Consotelo</title>
+  <meta name="description" content="Plain-English answers about Consotelo&#x27;s Australian non-GST and GST invoicing, manual invoice control, printable agreements, session timing, MFA, SMS reminders and testing status.">
+  <link rel="canonical" href="https://rigourconsulting.github.io/Consotelo/faq/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Consotelo">
+  <meta property="og:locale" content="en_AU">
+  <meta property="og:title" content="Frequently asked questions | Consotelo">
+  <meta property="og:description" content="Plain-English answers about Consotelo&#x27;s Australian non-GST and GST invoicing, manual invoice control, printable agreements, session timing, MFA, SMS reminders and testing status.">
+  <meta property="og:url" content="https://rigourconsulting.github.io/Consotelo/faq/">
+  <meta property="og:image" content="https://rigourconsulting.github.io/Consotelo/assets/img/og-social-preview.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Consotelo — One place for every consultation">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Frequently asked questions | Consotelo">
+  <meta name="twitter:description" content="Plain-English answers about Consotelo&#x27;s Australian non-GST and GST invoicing, manual invoice control, printable agreements, session timing, MFA, SMS reminders and testing status.">
+  <meta name="twitter:image" content="https://rigourconsulting.github.io/Consotelo/assets/img/og-social-preview.png">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon.png">
+  <link rel="apple-touch-icon" href="../assets/img/consotelo_icon_128.png">
+  <link rel="stylesheet" href="../assets/css/site.css">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://rigourconsulting.github.io/Consotelo/#organization",
+  "name": "Rigour Consulting",
+  "url": "https://rigourconsulting.github.io/Consotelo/",
+  "logo": "https://rigourconsulting.github.io/Consotelo/assets/img/consotelo_icon.png",
+  "email": "rigour.consulting@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Perth",
+    "addressRegion": "WA",
+    "addressCountry": "AU"
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://rigourconsulting.github.io/Consotelo/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "FAQ",
+      "item": "https://rigourconsulting.github.io/Consotelo/faq/"
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does every Australian consultant have to charge GST in Consotelo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Rigour Consulting is not currently registered for Australian GST, so Consotelo issues ordinary invoices stating 'No GST has been charged (not registered for GST)' and does not label them as a Tax Invoice. Separately configured GST-registered practices can issue compliant Tax Invoices with GST-exclusive, GST-inclusive and GST-free items. Non-GST registration remains distinct from income-tax obligations."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does finishing a consultation timer automatically send an invoice?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Finishing a consultation records the verified duration and fee calculation only. The consultant always reviews and authorises invoice creation, issuing, payment receipts and overdue reminders."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens if I accidentally start and stop the timer after 6 seconds?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Under exact-minute and nearest-30-minute rounding with no minimum billable duration configured, a 6-second session rounds to 0 billable minutes (A$0.00). Your configured rounding rule and any agreed minimum duration are displayed clearly on screen before you finalise."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can clients print an agreement and sign it by hand instead of signing electronically?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Both consultants and clients can download and print a formatted A4 PDF with clearly labelled handwritten signature blocks, sign on paper, and upload a scanned or photographed copy (PDF, JPG or PNG). Uploaded copies require manual consultant review before finalisation. Drawn, uploaded-image and typed-name electronic acknowledgements are also supported."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is an electronic acknowledgement in Consotelo a certificate-based digital signature?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Consotelo records explicit signing consent, account identity, timestamps and SHA-256 document revision hashes, but does not represent typed, drawn or uploaded signatures as certificate-based digital signatures (PKI) and does not certify legal enforceability without independent Australian legal review."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can clients create invoices, change fees or view other clients' records?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Role permissions and practice tenant boundaries are enforced on the server for every API request. Clients can only view, download and respond to records belonging to their own authorised relationships."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do partial payments and overdue reminders work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Verified partial payments reduce the invoice's live outstanding balance immediately. First reminders, second reminders and final notices always reference the single original invoice without creating a new charge, and overdue notices are automatically suppressed once an invoice is paid in full."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does the Android 'Send SMS reminder' feature work, and does it cost money?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tapping 'Send SMS reminder' opens your phone's default Messages app with a prefilled reminder draft so you can review, edit or cancel it before sending under your ordinary mobile plan. Consotelo does not request restricted SMS permissions and never sends paid automated SMS messages by default."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are QR payment links enabled on every invoice?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Only when a practice configures a permanent, verified HTTPS payment domain. Consotelo blocks local development addresses, placeholder domains and temporary testing tunnels from appearing in QR codes while preserving configured bank-transfer instructions."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What authentication and two-step verification options are supported?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Consotelo supports password sign-in, optional RFC 6238 authenticator-app two-step verification (6-digit codes) and single-use recovery codes. Standards-based passkeys and Windows Hello are built in and activate once a practice connects to a permanent HTTPS domain; rotating temporary test tunnels intentionally disable passkeys."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I download Consotelo from Google Play or sign up for a live cloud account today?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not yet. Consotelo v1.0.0 is currently prepared for controlled internal testing on Android, Windows desktop and web browsers. Permanent commercial hosting and public store release are not yet live."
+      }
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+  <div class="top-ribbon" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../" class="brand-link" aria-label="Consotelo home">
+        <img src="../assets/img/consotelo_icon_64.png" alt="Consotelo logo" class="brand-logo" width="36" height="36">
+        <span class="brand-stack">
+          <span class="brand-title"><span class="brand-c">Con</span>sotelo</span>
+          <span class="brand-tagline">One place for every consultation</span>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="../features/" class="nav-link">Features</a> <a href="../how-it-works/" class="nav-link">How it works</a> <a href="../security/" class="nav-link">Security</a> <a href="../faq/" class="nav-link active" aria-current="page">FAQ</a> <a href="../support/" class="nav-link">Support</a>
+      </nav>
+      <details class="mobile-nav-toggle">
+        <summary class="mobile-nav-summary" aria-label="Open navigation menu">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path fill-rule="evenodd" d="M3 5h14a1 1 0 010 2H3a1 1 0 010-2zm0 4h14a1 1 0 010 2H3a1 1 0 010-2zm0 4h14a1 1 0 010 2H3a1 1 0 010-2z" clip-rule="evenodd" />
+          </svg>
+          <span>Menu</span>
+        </summary>
+        <nav class="mobile-nav-dropdown" aria-label="Mobile menu links">
+          <a href="../" class="nav-link">Home</a> <a href="../features/" class="nav-link">Features</a> <a href="../how-it-works/" class="nav-link">How it works</a> <a href="../security/" class="nav-link">Security</a> <a href="../faq/" class="nav-link active" aria-current="page">FAQ</a> <a href="../support/" class="nav-link">Support</a> <a href="../releases/" class="nav-link">Releases</a>
+        </nav>
+      </details>
+    </div>
+  </header>
+
+  <main id="main" class="main-content">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="../">Home</a></li>
+        <li aria-current="page">FAQ</li>
+      </ol>
+    </nav>
+    <section class="section" aria-labelledby="faq-h1">
+      <div class="section-header">
+        <p class="section-kicker">Frequently asked questions</p>
+        <h1 id="faq-h1" class="page-heading">Straight answers for consultants and clients</h1>
+        <p class="section-lead">Plain-English guidance on Australian GST handling, timing, agreements, privacy, SMS, and current internal-testing status.</p>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item" open>
+          <summary>Does every Australian consultant have to charge GST in Consotelo?</summary>
+          <div class="faq-answer"><p>No. Rigour Consulting is not currently registered for Australian GST, so Consotelo issues ordinary invoices stating &#x27;No GST has been charged (not registered for GST)&#x27; and does not label them as a Tax Invoice. Separately configured GST-registered practices can issue compliant Tax Invoices with GST-exclusive, GST-inclusive and GST-free items. Non-GST registration remains distinct from income-tax obligations.</p></div>
+        </details>
+        <details class="faq-item" open>
+          <summary>Does finishing a consultation timer automatically send an invoice?</summary>
+          <div class="faq-answer"><p>No. Finishing a consultation records the verified duration and fee calculation only. The consultant always reviews and authorises invoice creation, issuing, payment receipts and overdue reminders.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>What happens if I accidentally start and stop the timer after 6 seconds?</summary>
+          <div class="faq-answer"><p>Under exact-minute and nearest-30-minute rounding with no minimum billable duration configured, a 6-second session rounds to 0 billable minutes (A$0.00). Your configured rounding rule and any agreed minimum duration are displayed clearly on screen before you finalise.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>Can clients print an agreement and sign it by hand instead of signing electronically?</summary>
+          <div class="faq-answer"><p>Yes. Both consultants and clients can download and print a formatted A4 PDF with clearly labelled handwritten signature blocks, sign on paper, and upload a scanned or photographed copy (PDF, JPG or PNG). Uploaded copies require manual consultant review before finalisation. Drawn, uploaded-image and typed-name electronic acknowledgements are also supported.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>Is an electronic acknowledgement in Consotelo a certificate-based digital signature?</summary>
+          <div class="faq-answer"><p>No. Consotelo records explicit signing consent, account identity, timestamps and SHA-256 document revision hashes, but does not represent typed, drawn or uploaded signatures as certificate-based digital signatures (PKI) and does not certify legal enforceability without independent Australian legal review.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>Can clients create invoices, change fees or view other clients&#x27; records?</summary>
+          <div class="faq-answer"><p>No. Role permissions and practice tenant boundaries are enforced on the server for every API request. Clients can only view, download and respond to records belonging to their own authorised relationships.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>How do partial payments and overdue reminders work?</summary>
+          <div class="faq-answer"><p>Verified partial payments reduce the invoice&#x27;s live outstanding balance immediately. First reminders, second reminders and final notices always reference the single original invoice without creating a new charge, and overdue notices are automatically suppressed once an invoice is paid in full.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>How does the Android &#x27;Send SMS reminder&#x27; feature work, and does it cost money?</summary>
+          <div class="faq-answer"><p>Tapping &#x27;Send SMS reminder&#x27; opens your phone&#x27;s default Messages app with a prefilled reminder draft so you can review, edit or cancel it before sending under your ordinary mobile plan. Consotelo does not request restricted SMS permissions and never sends paid automated SMS messages by default.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>Are QR payment links enabled on every invoice?</summary>
+          <div class="faq-answer"><p>Only when a practice configures a permanent, verified HTTPS payment domain. Consotelo blocks local development addresses, placeholder domains and temporary testing tunnels from appearing in QR codes while preserving configured bank-transfer instructions.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>What authentication and two-step verification options are supported?</summary>
+          <div class="faq-answer"><p>Consotelo supports password sign-in, optional RFC 6238 authenticator-app two-step verification (6-digit codes) and single-use recovery codes. Standards-based passkeys and Windows Hello are built in and activate once a practice connects to a permanent HTTPS domain; rotating temporary test tunnels intentionally disable passkeys.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>Can I download Consotelo from Google Play or sign up for a live cloud account today?</summary>
+          <div class="faq-answer"><p>Not yet. Consotelo v1.0.0 is currently prepared for controlled internal testing on Android, Windows desktop and web browsers. Permanent commercial hosting and public store release are not yet live.</p></div>
+        </details>
+      </div>
+      <div class="highlight-box" style="margin-top:28px;">
+        <p>Still have a question? Email <a href="mailto:rigour.consulting@gmail.com">rigour.consulting@gmail.com</a> or visit our <a href="../support/">Support page</a>.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div>
+        <h2 class="footer-heading">Consotelo</h2>
+        <p>One place for every consultation. Published by Rigour Consulting in Perth, Western Australia.</p>
+        <p><strong>Status:</strong> Controlled internal testing (<code>v1.0.0</code>). This static site is informational only and does not process logins or payments.</p>
+        <address class="contact-block">
+          Support: <a href="mailto:rigour.consulting@gmail.com">rigour.consulting@gmail.com</a>
+        </address>
+      </div>
+
+      <div>
+        <h2 class="footer-heading">Product</h2>
+        <ul class="footer-links">
+          <li><a href="../">Overview</a></li>
+          <li><a href="../features/">Features &amp; platforms</a></li>
+          <li><a href="../how-it-works/">How it works</a></li>
+          <li><a href="../faq/">Frequently asked questions</a></li>
+          <li><a href="../releases/">Release status</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="footer-heading">Policies &amp; trust</h2>
+        <ul class="footer-links">
+          <li><a href="../privacy/">Privacy policy</a></li>
+          <li><a href="../account-deletion/">Request account deletion</a></li>
+          <li><a href="../terms/">Terms of service</a></li>
+          <li><a href="../security/">Security information</a></li>
+          <li><a href="../accessibility/">Accessibility statement</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="footer-heading">Support &amp; references</h2>
+        <ul class="footer-links">
+          <li><a href="../support/">Support &amp; help centre</a></li>
+          <li><a href="mailto:rigour.consulting@gmail.com">Email Rigour Consulting</a></li>
+          <li><a href="../llms.txt">Plain-text site guide (llms.txt)</a></li>
+          <li><a href="../sitemap.xml">XML sitemap</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Rigour Consulting. Perth, Western Australia.</p>
+      <p>Updated: 26/11/2026</p>
+    </div>
+  </footer>
+  <script src="../assets/js/site.js" defer></script>
+</body>
+</html>

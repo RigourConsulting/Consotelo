@@ -1,4 +1,22 @@
+# Consotelo Public Information Website robots.txt
+# Note: On GitHub Pages project sites, crawlers look for robots.txt at the origin root
+# (https://rigourconsulting.github.io/robots.txt). This project-level file documents
+# public crawl preferences and sitemap discovery; private authenticated app endpoints
+# are hosted separately and protected by authentication and X-Robots-Tag headers.
+
 User-agent: *
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
 Allow: /
 
 Sitemap: https://rigourconsulting.github.io/Consotelo/sitemap.xml

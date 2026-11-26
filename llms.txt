@@ -1,0 +1,25 @@
+# Consotelo
+
+> One place for every consultation — consultation management software by Rigour Consulting (Perth, Western Australia).
+
+Consotelo helps independent consultants and their clients coordinate bookings by mutual agreement, track reviewable consultation time, prepare printable or electronically acknowledged agreements, and issue accurate Australian invoices.
+
+## Publisher & Current Status
+- Publisher: Rigour Consulting (Perth, Western Australia)
+- Support contact: rigour.consulting@gmail.com
+- Current status: Controlled internal testing (`v1.0.0`, Android package `au.com.rigourconsulting.consotelo`). Not yet in general public commercial release; permanent hosted SaaS infrastructure and live online payment gateways are not currently active.
+- Australian GST note: Rigour Consulting is not currently registered for Australian GST and issues ordinary non-GST invoices (`No GST has been charged`). Consotelo separately supports GST-registered practices issuing compliant Tax Invoices.
+- Security summary: Multi-tenant server-side isolation, password authentication with optional RFC 6238 authenticator-app two-step verification and single-use recovery codes, passkey/Windows Hello readiness requiring a permanent HTTPS domain, SHA-256 document digests, and manual Android SMS composer integration without restricted SMS permissions. Automated SMS is disabled by default.
+
+## Canonical Public Pages
+- [Home](https://rigourconsulting.github.io/Consotelo/): Product overview, 5-stage consultation workflow and interactive tour
+- [Features & Platforms](https://rigourconsulting.github.io/Consotelo/features/): Scheduling, session timer, Australian invoicing, agreements, notifications and Android/Windows/Web availability
+- [How It Works](https://rigourconsulting.github.io/Consotelo/how-it-works/): Consultant vs client responsibilities, mutual confirmation and privacy boundaries
+- [Frequently Asked Questions](https://rigourconsulting.github.io/Consotelo/faq/): Plain-English answers on GST/non-GST, manual invoicing, signing methods, SMS and security
+- [Release Status](https://rigourconsulting.github.io/Consotelo/releases/): Honest v1.0.0 internal-testing readiness and known limitations
+- [Security Information](https://rigourconsulting.github.io/Consotelo/security/): Verified technical security controls and vulnerability disclosure
+- [Privacy Policy](https://rigourconsulting.github.io/Consotelo/privacy/): Australian Privacy Principles (Privacy Act 1988 Cth) data handling and retention
+- [Account Deletion](https://rigourconsulting.github.io/Consotelo/account-deletion/): How users request account deletion and statutory retention distinctions
+- [Terms of Service](https://rigourconsulting.github.io/Consotelo/terms/): Platform terms of service
+- [Accessibility Statement](https://rigourconsulting.github.io/Consotelo/accessibility/): WCAG 2.2 Level AA targets and accessibility support
+- [Support](https://rigourconsulting.github.io/Consotelo/support/): Contact and help resources

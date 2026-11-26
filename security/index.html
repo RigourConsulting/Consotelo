@@ -4,60 +4,108 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Security information | Consotelo</title>
-  <meta name="description" content="Security architecture, multi-tenant isolation, cryptographic protections, and responsible vulnerability disclosure policy for the Consotelo consulting platform.">
+  <meta name="description" content="Source-verified security controls for Consotelo: multi-tenant isolation, TOTP two-step verification, recovery codes, passkey domain gating, tamper-evident PDFs, and responsible disclosure.">
   <link rel="canonical" href="https://rigourconsulting.github.io/Consotelo/security/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Consotelo">
+  <meta property="og:locale" content="en_AU">
+  <meta property="og:title" content="Security information | Consotelo">
+  <meta property="og:description" content="Source-verified security controls for Consotelo: multi-tenant isolation, TOTP two-step verification, recovery codes, passkey domain gating, tamper-evident PDFs, and responsible disclosure.">
+  <meta property="og:url" content="https://rigourconsulting.github.io/Consotelo/security/">
+  <meta property="og:image" content="https://rigourconsulting.github.io/Consotelo/assets/img/og-social-preview.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Consotelo — One place for every consultation">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Security information | Consotelo">
+  <meta name="twitter:description" content="Source-verified security controls for Consotelo: multi-tenant isolation, TOTP two-step verification, recovery codes, passkey domain gating, tamper-evident PDFs, and responsible disclosure.">
+  <meta name="twitter:image" content="https://rigourconsulting.github.io/Consotelo/assets/img/og-social-preview.png">
   <link rel="icon" type="image/svg+xml" href="../favicon.svg">
   <link rel="icon" type="image/png" sizes="32x32" href="../favicon.png">
   <link rel="apple-touch-icon" href="../assets/img/consotelo_icon_128.png">
   <link rel="stylesheet" href="../assets/css/site.css">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://rigourconsulting.github.io/Consotelo/#organization",
+  "name": "Rigour Consulting",
+  "url": "https://rigourconsulting.github.io/Consotelo/",
+  "logo": "https://rigourconsulting.github.io/Consotelo/assets/img/consotelo_icon.png",
+  "email": "rigour.consulting@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Perth",
+    "addressRegion": "WA",
+    "addressCountry": "AU"
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://rigourconsulting.github.io/Consotelo/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Security",
+      "item": "https://rigourconsulting.github.io/Consotelo/security/"
+    }
+  ]
+}
+  </script>
 </head>
 <body>
   <a href="#main" class="skip-link">Skip to main content</a>
+  <div class="top-ribbon" aria-hidden="true"></div>
 
   <header class="site-header">
     <div class="header-container">
       <a href="../" class="brand-link" aria-label="Consotelo home">
         <img src="../assets/img/consotelo_icon_64.png" alt="Consotelo logo" class="brand-logo" width="36" height="36">
-        <span class="brand-title"><span class="brand-c">C</span>onsotelo</span>
-        <span class="brand-tagline">One place for every consultation</span>
+        <span class="brand-stack">
+          <span class="brand-title"><span class="brand-c">Con</span>sotelo</span>
+          <span class="brand-tagline">One place for every consultation</span>
+        </span>
       </a>
       <nav class="site-nav" aria-label="Primary navigation">
-        <a href="../" class="nav-link">Home</a>
-        <a href="../privacy/" class="nav-link">Privacy policy</a>
-        <a href="../account-deletion/" class="nav-link">Account deletion</a>
-        <a href="../support/" class="nav-link">Support</a>
-        <a href="../terms/" class="nav-link">Terms</a>
-        <a href="./" class="nav-link active" aria-current="page">Security</a>
-        <a href="../accessibility/" class="nav-link">Accessibility</a>
+        <a href="../features/" class="nav-link">Features</a> <a href="../how-it-works/" class="nav-link">How it works</a> <a href="../security/" class="nav-link active" aria-current="page">Security</a> <a href="../faq/" class="nav-link">FAQ</a> <a href="../support/" class="nav-link">Support</a>
       </nav>
-      <details class="mobile-nav-toggle" aria-label="Mobile navigation">
-        <summary class="mobile-nav-summary">
+      <details class="mobile-nav-toggle">
+        <summary class="mobile-nav-summary" aria-label="Open navigation menu">
           <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
             <path fill-rule="evenodd" d="M3 5h14a1 1 0 010 2H3a1 1 0 010-2zm0 4h14a1 1 0 010 2H3a1 1 0 010-2zm0 4h14a1 1 0 010 2H3a1 1 0 010-2z" clip-rule="evenodd" />
           </svg>
           <span>Menu</span>
         </summary>
         <nav class="mobile-nav-dropdown" aria-label="Mobile menu links">
-          <a href="../" class="nav-link">Home</a>
-          <a href="../privacy/" class="nav-link">Privacy policy</a>
-          <a href="../account-deletion/" class="nav-link">Account deletion</a>
-          <a href="../support/" class="nav-link">Support</a>
-          <a href="../terms/" class="nav-link">Terms</a>
-          <a href="../security/" class="nav-link active">Security</a>
-          <a href="../accessibility/" class="nav-link">Accessibility</a>
+          <a href="../" class="nav-link">Home</a> <a href="../features/" class="nav-link">Features</a> <a href="../how-it-works/" class="nav-link">How it works</a> <a href="../security/" class="nav-link active" aria-current="page">Security</a> <a href="../faq/" class="nav-link">FAQ</a> <a href="../support/" class="nav-link">Support</a> <a href="../releases/" class="nav-link">Releases</a>
         </nav>
       </details>
     </div>
   </header>
 
   <main id="main" class="main-content">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="../">Home</a></li>
+        <li aria-current="page">Security</li>
+      </ol>
+    </nav>
     <article class="policy-content" aria-labelledby="security-title">
       <h1 id="security-title" class="page-heading">Security information</h1>
 
       <div class="policy-meta">
         <span><strong>Publisher</strong> Rigour Consulting</span>
         <span><strong>Location</strong> Perth, Western Australia</span>
-        <span><strong>Effective date</strong> 25/11/2026</span>
+        <span><strong>Effective date</strong> 26/11/2026</span>
         <span><strong>Security contact</strong> rigour.consulting@gmail.com</span>
       </div>
 
@@ -77,23 +125,23 @@
         </div>
 
         <div class="card">
-          <h3 class="card-title">Cryptographic token hashing</h3>
-          <p class="card-body">Session authentication tokens are cryptographically generated using secure random bytes and persisted exclusively as SHA-256 hashes. Plaintext tokens exist only in memory on the client device during active sessions.</p>
+          <h3 class="card-title">Cryptographic token hashing &amp; encrypted device storage</h3>
+          <p class="card-body">Session tokens are generated using cryptographically secure random bytes and stored server-side exclusively as SHA-256 hashes. On native Android and Windows devices, active session tokens are stored in OS-protected secure storage (Android Keystore / Windows DPAPI); web sessions use HTTP-only cookies with CSRF protection.</p>
         </div>
 
         <div class="card">
-          <h3 class="card-title">Privileged governance &amp; session safeguards</h3>
-          <p class="card-body">Accounts are protected by strong salted password hashing, login rate limiting, session expiry and revocation, recent password re-authentication for sensitive actions, immutable audit trails, and last-owner lockout protection. Privileged platform administration is restricted to the trusted local environment during internal testing. Multi-factor authentication is explicitly deferred from internal testing v1.0.0 and remains a planned commercial enhancement.</p>
+          <h3 class="card-title">Authentication, authenticator-app MFA &amp; passkey readiness</h3>
+          <p class="card-body">Accounts are protected by strong salted password hashing, database-backed login rate limiting, RFC 6238 authenticator-app two-step verification (with encrypted secrets and single-use SHA-256 recovery codes), per-session 15-minute step-up re-authentication for sensitive actions, device/session revocation, and immutable audit logs. Standards-based FIDO2/WebAuthn passkey and Windows Hello support is built in and activates when a practice connects to a permanent controlled HTTPS domain (rotating test tunnels are blocked). SMS one-time codes are intentionally disabled. Privileged platform administration is restricted to the trusted local environment.</p>
         </div>
 
         <div class="card">
-          <h3 class="card-title">Tamper-evident document hashing</h3>
-          <p class="card-body">Every consultation agreement and tax invoice PDF is bound to a cryptographic SHA-256 byte digest. Prior to electronic acknowledgement, the client verifies that the downloaded document matches the approved revision.</p>
+          <h3 class="card-title">Tamper-evident agreements &amp; invoicing</h3>
+          <p class="card-body">Every consultation agreement and invoice PDF is bound to a SHA-256 digest. Clients may download and print an A4 agreement to sign by hand and upload a scanned or photographed copy (PDF, JPG or PNG), or sign electronically. Uploaded handwritten copies require manual consultant review and are not automatically treated as identity-verified. Finalised agreements are locked against silent replacement; subsequent changes require a new auditable amendment.</p>
         </div>
 
         <div class="card">
           <h3 class="card-title">Encrypted network transmission</h3>
-          <p class="card-body">All communications between client devices and our backend services use Transport Layer Security with modern cipher suites. Cleartext HTTP connections are rejected by the application.</p>
+          <p class="card-body">All remote communications between client devices and practice servers require verified HTTPS (TLS). Cleartext remote HTTP connections and arbitrary self-signed certificates are rejected by release builds.</p>
         </div>
 
         <div class="card">
@@ -118,44 +166,62 @@
 
       <h2>Our response commitment</h2>
       <p>We acknowledge security reports within two Australian business days. Our engineering team prioritises security vulnerabilities based on severity, investigates root causes, and deploys verified corrections through our gated testing pipeline.</p>
+    
+      <h2>SMS handling &amp; independent verification scope</h2>
+      <p><strong>Manual SMS vs optional automated SMS:</strong> On Android, Consotelo's <em>Send SMS reminder</em> action opens the device's own Messages app with a prefilled draft so the consultant reviews and chooses whether to send it. Consotelo does not request restricted SMS permissions (<code>SEND_SMS</code>/<code>READ_SMS</code>). Automated carrier SMS delivery is disabled by default and requires explicit practice opt-in and provider configuration.</p>
+      <p><strong>Honest assurance boundary:</strong> No software system can guarantee absolute or perfect security, and Consotelo has not undergone an external paid penetration-testing certification. Security claims on this page describe controls verified in automated and local device testing.</p>
     </article>
   </main>
 
   <footer class="site-footer">
     <div class="footer-container">
       <div>
-        <h3 class="footer-heading">Consotelo</h3>
-        <p>One place for every consultation. Developed by Rigour Consulting in Perth, Western Australia.</p>
+        <h2 class="footer-heading">Consotelo</h2>
+        <p>One place for every consultation. Published by Rigour Consulting in Perth, Western Australia.</p>
+        <p><strong>Status:</strong> Controlled internal testing (<code>v1.0.0</code>). This static site is informational only and does not process logins or payments.</p>
         <address class="contact-block">
-          Support inquiries: <a href="mailto:rigour.consulting@gmail.com">rigour.consulting@gmail.com</a>
+          Support: <a href="mailto:rigour.consulting@gmail.com">rigour.consulting@gmail.com</a>
         </address>
       </div>
 
       <div>
-        <h3 class="footer-heading">Policies and compliance</h3>
+        <h2 class="footer-heading">Product</h2>
+        <ul class="footer-links">
+          <li><a href="../">Overview</a></li>
+          <li><a href="../features/">Features &amp; platforms</a></li>
+          <li><a href="../how-it-works/">How it works</a></li>
+          <li><a href="../faq/">Frequently asked questions</a></li>
+          <li><a href="../releases/">Release status</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="footer-heading">Policies &amp; trust</h2>
         <ul class="footer-links">
           <li><a href="../privacy/">Privacy policy</a></li>
           <li><a href="../account-deletion/">Request account deletion</a></li>
           <li><a href="../terms/">Terms of service</a></li>
-          <li><a href="./">Security information</a></li>
+          <li><a href="../security/">Security information</a></li>
           <li><a href="../accessibility/">Accessibility statement</a></li>
         </ul>
       </div>
 
       <div>
-        <h3 class="footer-heading">Support and assistance</h3>
+        <h2 class="footer-heading">Support &amp; references</h2>
         <ul class="footer-links">
-          <li><a href="../support/">Help centre</a></li>
-          <li><a href="mailto:rigour.consulting@gmail.com">Email support</a></li>
-          <li><a href="https://github.com/RigourConsulting/Consotelo">GitHub project</a></li>
+          <li><a href="../support/">Support &amp; help centre</a></li>
+          <li><a href="mailto:rigour.consulting@gmail.com">Email Rigour Consulting</a></li>
+          <li><a href="../llms.txt">Plain-text site guide (llms.txt)</a></li>
+          <li><a href="../sitemap.xml">XML sitemap</a></li>
         </ul>
       </div>
     </div>
 
     <div class="footer-bottom">
-      <p>&copy; 2026 Rigour Consulting. All rights reserved. Perth, Western Australia.</p>
-      <p>Effective date: 25/11/2026</p>
+      <p>&copy; 2026 Rigour Consulting. Perth, Western Australia.</p>
+      <p>Updated: 26/11/2026</p>
     </div>
   </footer>
+  <script src="../assets/js/site.js" defer></script>
 </body>
 </html>
